@@ -10,7 +10,7 @@ Instead of training just one model, I experimented with multiple machine learnin
 
 ## Live Demo
 
-🔗 **Streamlit App:** [*Add your deployed app link here*
+🔗 **Streamlit App:** [* app link*
 ](https://epdgv3uffzn3thbn6zgao6.streamlit.app/)
 ---
 
