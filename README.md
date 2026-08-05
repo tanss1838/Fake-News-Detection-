@@ -1,115 +1,63 @@
 # 📰 Fake News Detection using Machine Learning
 
-An end-to-end **Fake News Detection** system built using **Natural Language Processing (NLP)** and **Machine Learning**. The application classifies news articles as **Fake** or **Real** using TF-IDF vectorization and multiple machine learning algorithms. The final model is deployed as an interactive web application using **Streamlit**.
+## About the Project
+
+Fake news spreads quickly on social media and online platforms, making it difficult to verify whether the information is trustworthy. The goal of this project is to build a machine learning model that can classify a news article as **Fake** or **Real** using Natural Language Processing (NLP).
+
+Instead of training just one model, I experimented with multiple machine learning algorithms, compared their performance, and selected the best-performing approach. I also built a simple Streamlit web application so users can paste any news article and instantly get a prediction.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
-🔗 **Live App:** *Paste your Streamlit URL here*
+🔗 **Streamlit App:** [*Add your deployed app link here*
+](https://epdgv3uffzn3thbn6zgao6.streamlit.app/)
+---
 
-## 📂 GitHub Repository
+## Dataset
 
-🔗 *Paste your GitHub repository URL here*
+This project uses the **Fake and Real News Dataset** available on Kaggle.
+
+The dataset contains:
+
+- **23,481** fake news articles
+- **21,417** real news articles
+
+for a total of **44,898** news articles.
 
 ---
 
-## 📌 Project Overview
-
-Fake news has become a major challenge in today's digital world. This project aims to automatically classify news articles as **Fake** or **Real** by applying text preprocessing, feature extraction, and machine learning techniques.
+## What I Did
 
 The project follows a complete machine learning workflow:
 
-- Data Collection
-- Exploratory Data Analysis (EDA)
-- Text Preprocessing
-- TF-IDF Feature Extraction
-- Model Training & Evaluation
-- Model Deployment using Streamlit
+- Explored and understood the dataset
+- Cleaned and preprocessed the text
+- Performed exploratory data analysis (EDA)
+- Converted text into numerical features using TF-IDF
+- Trained multiple machine learning models
+- Compared model performance using different evaluation metrics
+- Saved the best model
+- Built and deployed a Streamlit application
 
 ---
 
-## 📊 Dataset
+## Text Preprocessing
 
-**Dataset:** Fake and Real News Dataset (Kaggle)
+Before training the model, each article was cleaned using the following steps:
 
-The dataset consists of two CSV files:
-
-- **Fake.csv** – Fake news articles
-- **True.csv** – Real news articles
-
-### Dataset Statistics
-
-| Description | Value |
-|------------|------:|
-| Total Articles | 44,898 |
-| Fake News | 23,481 |
-| Real News | 21,417 |
+- Converted text to lowercase
+- Removed URLs and HTML tags
+- Removed punctuation and numbers
+- Removed stopwords
+- Applied lemmatization
+- Converted the cleaned text into TF-IDF vectors
 
 ---
 
-## 🛠️ Technologies Used
+## Models Compared
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- NLTK
-- Scikit-learn
-- Joblib
-- Streamlit
-
----
-
-## 🔄 Workflow
-
-```
-News Article
-      │
-      ▼
-Text Cleaning
-      │
-      ▼
-Tokenization
-      │
-      ▼
-Stopword Removal
-      │
-      ▼
-Lemmatization
-      │
-      ▼
-TF-IDF Vectorization
-      │
-      ▼
-Machine Learning Model
-      │
-      ▼
-Prediction (Fake / Real)
-```
-
----
-
-## 🧹 Text Preprocessing
-
-The following preprocessing steps were applied:
-
-- Convert text to lowercase
-- Remove URLs
-- Remove HTML tags
-- Remove punctuation
-- Remove numbers
-- Remove extra spaces
-- Tokenization
-- Stopword removal
-- Lemmatization
-
----
-
-## 🤖 Machine Learning Models Compared
-
-The following models were trained and evaluated:
+I trained and evaluated the following models:
 
 - Logistic Regression
 - Multinomial Naive Bayes
@@ -119,7 +67,7 @@ The following models were trained and evaluated:
 
 ---
 
-## 📈 Model Performance
+## Results
 
 | Model | Accuracy |
 |-------------------------|---------:|
@@ -129,17 +77,27 @@ The following models were trained and evaluated:
 | Logistic Regression | **98.76%** |
 | Multinomial Naive Bayes | **94.30%** |
 
----
-
-## 📸 Application Screenshot
-
-> *(Add a screenshot of your Streamlit application here)*
+Random Forest achieved the highest accuracy on this dataset. During the project, I also compared the strengths of different algorithms instead of relying on a single model.
 
 ---
 
-## 📁 Project Structure
+## Technologies Used
 
-```
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- NLTK
+- Scikit-learn
+- Streamlit
+- Joblib
+
+---
+
+## Project Structure
+
+```text
 Fake-News-Detection/
 │
 ├── app.py
@@ -153,43 +111,15 @@ Fake-News-Detection/
 
 ---
 
-## ⚙️ Installation
+## Sample Prediction
 
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Fake-News-Detection.git
-```
-
-Move into the project directory:
-
-```bash
-cd Fake-News-Detection
-```
-
-Install the required libraries:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
-streamlit run app.py
-```
-
----
-
-## 🎯 Sample Prediction
-
-### Input
+**Input**
 
 ```
 Scientists discover a magical fruit that allows humans to breathe underwater.
 ```
 
-### Output
+**Prediction**
 
 ```
 ❌ Fake News
@@ -197,47 +127,27 @@ Scientists discover a magical fruit that allows humans to breathe underwater.
 
 ---
 
-### Input
+## What I Learned
 
-```
-The Reserve Bank of India announced its latest monetary policy after the MPC meeting.
-```
+This project helped me understand:
 
-### Output
-
-```
-✅ Real News
-```
-
----
-
-## 📚 Key Learnings
-
-Through this project, I learned:
-
-- NLP preprocessing techniques
+- The complete NLP pipeline using traditional machine learning
+- Text preprocessing techniques
 - TF-IDF feature extraction
-- Training and comparing multiple machine learning models
-- Model evaluation using Accuracy, Precision, Recall, and F1-score
-- Saving and loading models using Joblib
-- Building and deploying ML applications with Streamlit
+- Comparing multiple machine learning models
+- Evaluating models using Accuracy, Precision, Recall and F1-score
+- Deploying a machine learning model using Streamlit
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
-- Deep Learning-based models (LSTM/BERT)
-- Transformer-based text classification
-- Probability confidence visualization
-- Docker deployment
-- Cloud deployment using AWS or Azure
+Some ideas to improve this project in the future:
+
+- Fine-tune hyperparameters
+- Experiment with deep learning models like LSTM
+- Build a BERT-based classifier
+- Add confidence scores and better visualizations
+- Deploy using Docker and cloud platforms
 
 ---
-
-## 👤 Author
-
-**Tanuja**
-
-GitHub: https://github.com/YOUR_USERNAME
-
-LinkedIn: *Add your LinkedIn profile here*
